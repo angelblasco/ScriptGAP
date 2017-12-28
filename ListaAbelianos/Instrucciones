@@ -1,1 +1,6 @@
 Para iniciar el script ejecutar Read("../AbelianList.g"); en GAP.
+Esto carga la funcion AbelianSubgroups(G) donde el parametro G es el grupo del cual queremos obtener el listado
+de los subgrupos abelianos.
+
+Es posible que durante la lectura del fichero GAP muestre el mensaje "Syntax warning ... " varias veces,
+esto no impide la correcta ejecucion del fichero ni el uso de la funcion AbelianSubgroups().
