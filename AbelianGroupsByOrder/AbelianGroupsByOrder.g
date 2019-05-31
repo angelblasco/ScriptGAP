@@ -12,6 +12,6 @@ local L, LL;
 		LL:=Filtered(L, x -> IsAbelian(x));;
 		return Length(LL);
 	else
-		return "GrpConst package is needed but it is not loaded, download via https://gap-packages.github.io/grpconst/";
+		Print( "GrpConst package is needed but it is not loaded, download via https://gap-packages.github.io/grpconst/");
 	fi;
 end;;
