@@ -12,7 +12,7 @@
 
 Se requiere el paquete [GrpConst](https://gap-packages.github.io/grpconst/).
 
-Para iniciar el script ejecutar Read("../AbelianGroupsByOrder.g"); en GAP.
+Para iniciar el script ejecutar ``Read("../AbelianGroupsByOrder.g");`` en GAP.
 Esto carga la funcion AbelianGroupsByOrder(n) donde el parametro n es orden sobre el
 cual vamos a calcular el numero de grupos abelianos no isomorfos.
 
@@ -30,6 +30,6 @@ Ejemplo de ejecucion:
     Homepage: https://gap-packages.github.io/grpconst/
 
     6
---
+---
 Es posible que durante la lectura del fichero GAP muestre el mensaje "Syntax warning ... " varias veces,
 esto no impide la correcta ejecucion del fichero ni el uso de la funcion AbelianGroupsByOrder().
