@@ -1,14 +1,9 @@
-##################################
-#				##
-#				##
-## NUMERO DE GRUPOS ABELIANOS 	##
-#				##
-## Angel Blasco 		##
-# 				##
-## Mayo 2019			##
-#				##	
-#				##
-##################################
+## NUMERO DE GRUPOS ABELIANOS
+
+### Angel Blasco 
+
+### Mayo 2019		
+---
 
 Se requiere el paquete [GrpConst](https://gap-packages.github.io/grpconst/).
 
