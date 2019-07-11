@@ -1,0 +1,31 @@
+Saving and Loading a Workspace
+
+SaveWorkspace( filename ) F
+will save a ``snapshot'' image of the current GAP workspace in the file filename. This image then can be loaded by another copy of GAP which then will behave as at the point when SaveWorkspace was called.
+
+gap> a:=1;
+gap> SaveWorkspace("savefile");
+true
+gap> quit;
+SaveWorkspace can only be used at the main gap> prompt. It cannot be included in the body of a loop or function, or called from a break loop.
+
+-L filename
+A saved workspace can be loaded by starting GAP with the option -L. This will start GAP and load the workspace.
+
+you@unix> gap -L savefile
+gap> a;
+1
+Under UNIX, it is possible to compress savefiles using gzip. Compression typically reduces the size of a workspace by a factor 3 or 4. If GAP is started with a compressed savefile (omit the .gz ending), it will try to locate gzip on the system and uncompress the file automatically while reading it.
+
+you@unix> gzip -9 savefile
+you@unix> gap -L savefile
+gap> a;
+1
+We cannot guarantee that saved workspaces are portable between different system architectures or over different versions of GAP or its library.
+
+If compiled modules had been loaded into GAP before the workspace was saved, they will be loaded into the new GAP session during the workspace loading process. If they are not available then the load will fail. Additional compiled modules will not be used, even if they are available, although they may be loaded later using Reread (see Reread). SaveWorkspace may sometimes produce warning messages, as in
+
+gap> SaveWorkspace("b5");
+#W bad bag id 4 found, 0 saved
+#W bad bag id 20 found, 0 saved
+true
