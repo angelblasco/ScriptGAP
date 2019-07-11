@@ -1,0 +1,5 @@
+# creamos el fichero que almacena los datos de salida
+file:= Filename(DirectoryHome(), "unfichero.csv");  
+
+# insertamos datos en el fichero creado (data puede ser un array de datos por ejemplo)
+PrintTo(file,data);
