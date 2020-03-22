@@ -1,0 +1,18 @@
+**********************
+***Factorizacion LU***
+**********************
+* Como realizar la factorizacion LU de  *
+* una matriz cuadrada invertible en GAP *
+**********************
+#
+# Creamos una matriz cuadrada invertible:
+gap> A:=[[2,2,2],[4,7,7],[6,18,22]];
+[ [ 2, 2, 2 ], [ 4, 7, 7 ], [ 6, 18, 22 ] ]
+# Generacion de la matriz triangular superior U:
+gap> U:=TriangulizedIntegerMat(A);                      
+[ [ 2, 2, 2 ], [ 0, 3, 3 ], [ 0, 0, 4 ] ]
+# Para obtener la matriz triangular inferior L
+# vamos a realizar L=A+U^(⁻1):
+gap> L:=A*InverseImmutable(U);
+[ [ 1, 0, 0 ], [ 2, 1, 0 ], [ 3, 4, 1 ] ]
+#
