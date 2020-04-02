@@ -1,1 +1,5 @@
-esto es un test
+git status --para ver el estado
+git add <fichero> --para añadir un fichero
+git commit -m "comentario" --para hacer el commit
+git push origin master --para subir el fichero añadido al repositorio
+git pull --para actualizar el directorio en local
